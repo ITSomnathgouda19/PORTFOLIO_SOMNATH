@@ -1,0 +1,64 @@
+<nav class="w-full fixed top-0 z-50 bg-transparent backdrop-blur-sm border-b border-[#112240]">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <div class="flex items-center justify-between h-20">
+
+      <!-- LEFT SIDE LOGO -->
+      <div class="shrink-0 cursor-pointer">
+        <span class="text-2xl font-bold tracking-tighter text-[#E6F1FF]">
+          SG19
+        </span>
+      </div>
+
+      <!-- RIGHT SIDE DESKTOP MENU -->
+      <div class="hidden md:flex">
+        <div class="flex items-center space-x-6">
+          <a href="#home" class="text-[#E6F1FF] hover:text-[#64FFDA] px-3 py-2 text-sm font-medium transition-colors duration-300">Home</a>
+          <a href="#about" class="text-[#E6F1FF] hover:text-[#64FFDA] px-3 py-2 text-sm font-medium transition-colors duration-300">About</a>
+          <a href="#skills" class="text-[#E6F1FF] hover:text-[#64FFDA] px-3 py-2 text-sm font-medium transition-colors duration-300">Skills</a>
+          <a href="#projects" class="text-[#E6F1FF] hover:text-[#64FFDA] px-3 py-2 text-sm font-medium transition-colors duration-300">Projects</a>
+          <a href="#experience" class="text-[#E6F1FF] hover:text-[#64FFDA] px-3 py-2 text-sm font-medium transition-colors duration-300">Experience</a>
+          <a href="#education" class="text-[#E6F1FF] hover:text-[#64FFDA] px-3 py-2 text-sm font-medium transition-colors duration-300">Education</a>
+          <a href="#certificates" class="text-[#E6F1FF] hover:text-[#64FFDA] px-3 py-2 text-sm font-medium transition-colors duration-300">Certificates</a>
+          <a href="#profile" class="text-[#E6F1FF] hover:text-[#64FFDA] px-3 py-2 text-sm font-medium transition-colors duration-300">Profile</a>
+          <a href="#contact" class="text-[#E6F1FF] hover:text-[#64FFDA] px-3 py-2 text-sm font-medium transition-colors duration-300">Contact Us</a>
+        </div>
+      </div>
+
+      <!-- MOBILE MENU BUTTON -->
+      <div class="flex md:hidden">
+        <button
+          type="button"
+          class="bg-[#112240] inline-flex items-center justify-center p-2 rounded-md text-[#64FFDA] hover:text-white hover:bg-[#1d3557] focus:outline-none"
+          (click)="toggleMobileMenu()"
+          [attr.aria-expanded]="isMobileMenuOpen"
+        >
+          <span class="sr-only">Open main menu</span>
+          <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+
+    </div>
+
+    <!-- MOBILE MENU -->
+    @if (isMobileMenuOpen) {
+    <div class="md:hidden pb-4">
+      <div class="flex flex-col space-y-1 px-2 pt-2">
+        <a href="#home" (click)="closeMobileMenu()" class="text-[#E6F1FF] hover:text-[#64FFDA] px-3 py-2 text-sm font-medium transition-colors duration-300">Home</a>
+        <a href="#about" (click)="closeMobileMenu()" class="text-[#E6F1FF] hover:text-[#64FFDA] px-3 py-2 text-sm font-medium transition-colors duration-300">About</a>
+        <a href="#skills" (click)="closeMobileMenu()" class="text-[#E6F1FF] hover:text-[#64FFDA] px-3 py-2 text-sm font-medium transition-colors duration-300">Skills</a>
+        <a href="#projects" (click)="closeMobileMenu()" class="text-[#E6F1FF] hover:text-[#64FFDA] px-3 py-2 text-sm font-medium transition-colors duration-300">Projects</a>
+        <a href="#experience" (click)="closeMobileMenu()" class="text-[#E6F1FF] hover:text-[#64FFDA] px-3 py-2 text-sm font-medium transition-colors duration-300">Experience</a>
+        <a href="#education" (click)="closeMobileMenu()" class="text-[#E6F1FF] hover:text-[#64FFDA] px-3 py-2 text-sm font-medium transition-colors duration-300">Education</a>
+        <a href="#certificates" (click)="closeMobileMenu()" class="text-[#E6F1FF] hover:text-[#64FFDA] px-3 py-2 text-sm font-medium transition-colors duration-300">Certificates</a>
+        <a href="#profile" (click)="closeMobileMenu()" class="text-[#E6F1FF] hover:text-[#64FFDA] px-3 py-2 text-sm font-medium transition-colors duration-300">Profile</a>
+        <a href="#contact" (click)="closeMobileMenu()" class="text-[#E6F1FF] hover:text-[#64FFDA] px-3 py-2 text-sm font-medium transition-colors duration-300">Contact Us</a>
+      </div>
+    </div>
+    }
+
+  </div>
+</nav>
