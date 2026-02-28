@@ -2,13 +2,13 @@
   "name": "portfolio",
   "version": "0.0.0",
   "scripts": {
-    "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
-    "watch": "ng build --watch --configuration development",
-    "test": "ng test",
-    "serve:ssr:portfolio": "node dist/portfolio/server/main.js"
-  },
+  "ng": "ng",
+  "start": "ng serve",
+  "build": "ng build && ng run portfolio:server",
+  "watch": "ng build --watch --configuration development",
+  "test": "ng test",
+  "serve:ssr:portfolio": "node dist/portfolio/server/main.js"
+},
   "private": true,
   "dependencies": {
     "@angular/animations": "^19.2.18",
