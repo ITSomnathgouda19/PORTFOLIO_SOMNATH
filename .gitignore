@@ -3,11 +3,11 @@ node_modules
 node_modules/
 
 # Angular build output
-dist/
+# dist/
 
 # Environment files
-src/environments/environment.ts
-src/environments/environment.prod.ts
+# src/environments/environment.ts
+# src/environments/environment.prod.ts
 
 # Optional: ignore all env files
 # src/environments/
