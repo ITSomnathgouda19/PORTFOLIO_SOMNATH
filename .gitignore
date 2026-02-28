@@ -1,0 +1,20 @@
+node_modules
+# Node modules
+node_modules/
+
+# Angular build output
+dist/
+
+# Environment files
+src/environments/environment.ts
+src/environments/environment.prod.ts
+
+# Optional: ignore all env files
+# src/environments/
+
+# Logs
+npm-debug.log
+yarn-error.log
+
+# IDE files
+.vscode/

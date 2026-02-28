@@ -2,6 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component, AfterViewInit, OnDestroy, Renderer2, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';  // 👈 YEH IMPORT KARNA ZAROORI HAI
 import emailjs from '@emailjs/browser';
+import { environment } from '../../../environments/environment';
 
 interface Certificate {
   title: string;
@@ -77,9 +78,9 @@ roles: string[] = [
   errorMessage = '';
 
   
-  private serviceID = 'service_arn8iut';//hosting 
-  private templateID = 'template_f8qvq0e';
-  private publicKey = 'OySBO-1CSGuM1s4Hr';
+  private serviceID = environment.emailServiceID;
+  private templateID = environment.emailTemplateID;
+  private publicKey = environment.emailPublicKey;
 
   selectedIndex = 0;
   autoSlideInterval: any;
